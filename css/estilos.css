@@ -1,0 +1,42 @@
+body {
+    background: #0cff2c;	
+    color: #000000;
+
+}
+
+header, main, footer{
+    background: #ffee00;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid;
+    border-color: #000;
+}
+
+nav ul, footer ul {    
+    list-style-type: none;
+}
+
+nav a, footer a {
+	text-decoration: none;
+    margin-right: 15px;
+}
+
+a:link {
+	color: #2bb458;
+}
+a:visited {
+	color: #525026;
+}
+a:hover {
+	color: #fcffe1;
+}
+a:active {
+	color: #63598f;
+}
+
+img {
+    border-radius: 30px;
+    border: solid;
+    border-color: #000;
+}
