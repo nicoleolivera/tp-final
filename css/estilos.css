@@ -40,3 +40,8 @@ img {
     border: solid;
     border-color: #000;
 }
+
+.contenedor {
+    margin: 15px;
+    padding: 10px;
+}
