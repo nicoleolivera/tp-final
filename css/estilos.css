@@ -1,3 +1,4 @@
+
 body {
     background: #0cff2c;	
     color: #000000;
@@ -6,11 +7,21 @@ body {
 
 header, main, footer{
     background: #ffee00;
-    margin: 10px;
+    margin: 20px;
     padding: 10px;
     border-radius: 10px;
     border: solid;
     border-color: #000;
+}
+
+section, aside {
+    background: #0077ff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid;
+    border-color: #000;
+
 }
 
 ul {    
@@ -33,15 +44,4 @@ a:hover {
 }
 a:active {
 	color: #63598f;
-}
-
-img {
-    border-radius: 30px;
-    border: solid;
-    border-color: #000;
-}
-
-.contenedor {
-    margin: 15px;
-    padding: 10px;
 }
