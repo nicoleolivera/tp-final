@@ -29,26 +29,27 @@
         </section>
 
         <section>
-            <h1>Bienvenidx</h1>
+            <p>Asi que.. estuviste navegando por la página, verdad? Toad quiere poner a prueba tu conocimiento para dejarte entrar al reino champiñon, aceptas el desafio?</p>
 
-            <div >
-                <p id="contenedorPregunta">Preg</p>
+            <p>Toad es muy competitivo, de hecho tiene el puntaje mas alto del reino, creer que puedas superarlo?</p>
 
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      Default radio
-                    </label>
+            <div>
+                <p id="contenedorPregunta">Presiona el botón 'Preguntame' para comenzar.</p>
+        
+                <div>
+                    <input type="radio" id="radio1" name="respuesta" class="respuesta" value="true">
+                    <label for="radio1">Verdadero</label>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
-                      Default checked radio
-                    </label>
+                <div>
+                    <input type="radio" id="radio2" name="respuesta" class="respuesta" value="false">
+                    <label for="radio2">Falso</label>
                 </div>
+                
             </div>
-
-            <button type="submit" id="btnPreguntame">Preguntame</button>
+        
+            <button id="btnPreguntame">Pregúntame</button>
+            <button id="btnReiniciar">Reiniciar</button>
+            <p id="mensajeResultado"></p>
         </section>
 
         <aside>
@@ -62,8 +63,8 @@
     <footer>
         <nav>
             <ul class="d-flex justify-content-center">
-                <li><a href="../contacto-alumna/contacto.html">Contacto</a></li>
-                <li><a href="../contacto-alumna/alumna.html">Alumna</a></li>
+                <li><a href="../contacto/index.html">Contacto</a></li>
+                <li><a href="../alumna/index.html">Alumna</a></li>
             </ul>
         </nav>
     </footer>
