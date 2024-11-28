@@ -10,11 +10,19 @@ let cantPreguntas = 0; // Contador de preguntas
 
 // Preguntas divididas en verdaderas y falsas
 let preguntasVerdaderas = [
-    
+    'Anya Taylor-Jay hizo el doblaje origial de Princess Peach en la película.',
+    'Super Mario Bros. fué lanzado en 1985.',
+    'Bowser es el rey de los Koopas.',
+    'Mario puede transformase en abeja',
+    'En su principio, los diseños para el juego debían ser hechos a mano.',
 ];
 
 let preguntasFalsas = [
-    
+    'La película de Mario Bros. sucede en Italia.',
+    'Donkey Kong es el rey del Reino Champiñon.',
+    'En la película, el actor Black Jack hace el doblaje de Luigi.',
+    'Super Mario Bros. fué creado antes que Donkey Kong.',
+    'Los Yoshis no varían de color porque son únicos en su especie.',
 ];
 
 let preguntaActual = ''; // Almacena el texto de la pregunta que se mostrará
@@ -51,14 +59,14 @@ btnPreguntame.addEventListener('click', function () {
 });
 
 // Evento para validar la respuesta de los radio buttons
-radios.forEach(radio => {
-    radio.addEventListener('change', function () {
+for (let i = 0; i < radios.length; i++) {
+    radios[i].onclick = function () { // Usamos 'onclick' en lugar de 'change'
         if (preguntaActual === '') {
             mensajeResultado.innerText = 'Por favor, presiona "Pregúntame" primero.';
             return;
         }
 
-        let valorSeleccionado = radio.value;
+        let valorSeleccionado = radios[i].value; // Usamos radios[i] directamente
 
         if ((esVerdadera && valorSeleccionado === "true") || (!esVerdadera && valorSeleccionado === "false")) {
             puntaje++;
@@ -66,8 +74,9 @@ radios.forEach(radio => {
         } else {
             mensajeResultado.innerText = 'Incorrecto. Puntaje: ' + puntaje;
         }
-    });
-});
+    };
+}
+
 
 // Evento para reiniciar el juego
 btnReiniciar.addEventListener('click', function () {
