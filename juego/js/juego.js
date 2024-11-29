@@ -3,37 +3,45 @@ let mostrarPregunta = document.querySelector('#contenedorPregunta');
 let btnPreguntame = document.querySelector('#btnPreguntame');
 let btnReiniciar = document.querySelector('#btnReiniciar');
 let mensajeResultado = document.querySelector('#mensajeResultado');
+let mensajeToad = document.querySelector('#mensajeToad'); // Nueva referencia para el mensaje de Toad
 let radios = document.querySelectorAll('.respuesta');
 
-let puntaje = 0; // Inicializar puntaje
-let cantPreguntas = 0; // Contador de preguntas
+// Puntajes y contadores
+let puntajeJugador = 0; 
+let puntajeToad = 0;
+let cantPreguntas = 0; 
 
 // Preguntas divididas en verdaderas y falsas
 let preguntasVerdaderas = [
-    'Anya Taylor-Jay hizo el doblaje origial de Princess Peach en la película.',
-    'Super Mario Bros. fué lanzado en 1985.',
+    'Anya Taylor-Joy hizo el doblaje original de Princess Peach en la película.',
+    'Super Mario Bros. fue lanzado en 1985.',
     'Bowser es el rey de los Koopas.',
-    'Mario puede transformase en abeja',
+    'Mario puede transformarse en abeja.',
     'En su principio, los diseños para el juego debían ser hechos a mano.',
 ];
 
 let preguntasFalsas = [
     'La película de Mario Bros. sucede en Italia.',
-    'Donkey Kong es el rey del Reino Champiñon.',
-    'En la película, el actor Black Jack hace el doblaje de Luigi.',
-    'Super Mario Bros. fué creado antes que Donkey Kong.',
+    'Donkey Kong es el rey del Reino Champiñón.',
+    'En la película, el actor Jack Black hace el doblaje de Luigi.',
+    'Super Mario Bros. fue creado antes que Donkey Kong.',
     'Los Yoshis no varían de color porque son únicos en su especie.',
 ];
 
-let preguntaActual = ''; // Almacena el texto de la pregunta que se mostrará
-let esVerdadera = false; // Determina si la pregunta es verdadera o falsa
+let preguntaActual = ''; 
+let esVerdadera = false;
+
+// Función para generar un puntaje aleatorio (0 o 100) para Toad
+function generarPuntajeToad() {
+    return Math.random() >= 0.5 ? 100 : 0;
+}
 
 // Evento para mostrar una nueva pregunta
 btnPreguntame.addEventListener('click', function () {
-    let aleatorio = Math.floor(Math.random() * 6) + 1; // 1, 2, 3, 4, 5, 6
+    let aleatorio = Math.floor(Math.random() * 6) + 1;
     let elegida;
 
-    if (aleatorio >= 1 && aleatorio <= 3) {
+    if (aleatorio <= 3) {
         elegida = Math.floor(Math.random() * preguntasVerdaderas.length);
         preguntaActual = preguntasVerdaderas[elegida];
         esVerdadera = true;
@@ -44,13 +52,13 @@ btnPreguntame.addEventListener('click', function () {
     }
 
     mostrarPregunta.innerText = preguntaActual;
-    mensajeResultado.innerText = ''; // Limpiar mensaje previo
+    mensajeResultado.innerText = '';
+    mensajeToad.innerText = ''; // Limpiar mensaje de Toad
     cantPreguntas++;
 
     for (let i = 0; i < radios.length; i++) {
         radios[i].checked = false;
     }
-    
 
     if (cantPreguntas === 11) {
         btnPreguntame.disabled = true;
@@ -58,38 +66,59 @@ btnPreguntame.addEventListener('click', function () {
     }
 });
 
-// Evento para validar la respuesta de los radio buttons
+// Evento para validar la respuesta
 for (let i = 0; i < radios.length; i++) {
-    radios[i].onclick = function () { // Usamos 'onclick' en lugar de 'change'
+    radios[i].onclick = function () {
         if (preguntaActual === '') {
             mensajeResultado.innerText = 'Por favor, presiona "Pregúntame" primero.';
             return;
         }
 
-        let valorSeleccionado = radios[i].value; // Usamos radios[i] directamente
+        let valorSeleccionado = radios[i].value;
 
+        // Validar respuesta del jugador
         if ((esVerdadera && valorSeleccionado === "true") || (!esVerdadera && valorSeleccionado === "false")) {
-            puntaje++;
-            mensajeResultado.innerText = '¡Correcto! Puntaje: ' + puntaje;
+            puntajeJugador += 100;
+            mensajeResultado.innerText = '¡Correcto! Monedas: ' + puntajeJugador;
         } else {
-            mensajeResultado.innerText = 'Incorrecto. Puntaje: ' + puntaje;
+            mensajeResultado.innerText = 'Incorrecto. Monedas: ' + puntajeJugador;
         }
+
+        // Generar puntaje aleatorio para Toad
+        let monedasToad = generarPuntajeToad();
+        puntajeToad += monedasToad;
+
+        // Mostrar si Toad respondió correctamente o no
+        if (monedasToad === 100) {
+            mensajeToad.innerText = 'Toad respondió correctamente. Monedas: ' + puntajeToad;
+        } else {
+            mensajeToad.innerText = 'Toad respondió incorrectamente. Monedas: ' + puntajeToad;
+        }
+
+        // Actualizar las monedas en la interfaz
+        document.querySelector('#monedasJugador').innerText = puntajeJugador;
+        document.querySelector('#monedasToad').innerText = puntajeToad;
     };
 }
 
-
 // Evento para reiniciar el juego
 btnReiniciar.addEventListener('click', function () {
-    puntaje = 0;
+    puntajeJugador = 0;
+    puntajeToad = 0;
     cantPreguntas = 0;
     preguntaActual = '';
     esVerdadera = false;
 
     mostrarPregunta.innerText = 'Presiona el botón de preguntas para intentarlo de nuevo';
     mensajeResultado.innerText = '';
+    mensajeToad.innerText = ''; // Reiniciar mensaje de Toad
     btnPreguntame.disabled = false;
 
     for (let i = 0; i < radios.length; i++) {
         radios[i].checked = false;
     }
+
+    // Reiniciar las monedas en la interfaz
+    document.querySelector('#monedasJugador').innerText = puntajeJugador;
+    document.querySelector('#monedasToad').innerText = puntajeToad;
 });

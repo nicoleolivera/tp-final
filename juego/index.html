@@ -33,6 +33,22 @@
 
             <p>Toad es muy competitivo, de hecho tiene el puntaje mas alto del reino, creer que puedas superarlo?</p>
 
+            <div class="d-flex justify-content-center gap-3">
+                <img src="img/moneda.png" alt="moneda">
+                <p>Monedas:</p> 
+                <p id="monedasJugador">0</p> <!-- Mostrar el puntaje inicial como 0 -->
+
+                <img src="img/moneda.png" alt="moneda">
+                <p>Monedas Toad:</p> 
+                <p id="monedasToad">0</p>
+            
+                <img src="img/corazon.png" alt="corazon">
+                <p>Vidas:</p>
+                <p id="vidas">3</p> <!-- Opcional: agregar para mostrar vidas si decides implementarlo -->
+            </div>
+            
+
+
             <div>
                 <p id="contenedorPregunta">Presiona el botón 'Preguntame' para comenzar.</p>
         
@@ -43,21 +59,22 @@
                 <div>
                     <input type="radio" id="radio2" name="respuesta" class="respuesta" value="false">
                     <label for="radio2">Falso</label>
-                </div>
-                
+                </diva>    
             </div>
-        
-            <button id="btnPreguntame">Pregúntame</button>
-            <button id="btnReiniciar">Reiniciar</button>
-            <p id="mensajeResultado"></p>
-        </section>
+            
+            <div>
+                <button id="btnPreguntame">Pregúntame</button>
+                <button id="btnReiniciar">Reiniciar</button>
+            </div>
 
-        <aside>
-            <a href="super-mario-bros.html"><img src="img/caja.png"></a>
-            <h2>¡Aquí hay una curiosidad!</h2>
-            <h3>¿Te gustaría saber más sobre la historia original del juego?</h3>
-            <a href="super-mario-bros.html">Saber más</a>
-        </aside>
+            <div>
+                <img src="img/mario-azul.png" alt="mario-azul">
+                <p id="mensajeResultado"></p>
+
+                <img src="img/toad.png" alt="toad">
+                <p id="mensajeToad"></p>
+            </div>
+        </section>
     </main>
 
     <footer>
