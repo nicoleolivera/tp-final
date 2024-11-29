@@ -28,6 +28,9 @@
         <section>
             <h1 class="d-flex justify-content-center">Personajes</h1>
         </section>
+        <section>
+            <p class="d-flex justify-content-center fs-5">Parece que encontraste a tus personajes favoritos, ¿verdad? Pero eso no es todo lo que hay para ver. Te damos una pista: haz clic en alguna imagen para descubrirlo.</p>
+        </section>
 
         <section>
             <div class="d-flex flex-wrap justify-content-center gap-3">
@@ -86,7 +89,7 @@
                 <article class="card text-bg-secondary mb-3" style="max-width: 600px">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="img/toad-personaje.jpg" class="img-fluid rounded-start" alt="toad-personaje">
+                            <img src="img/toad-personaje.jpg" class="img-fluid rounded-start" alt="toad-personaje" id="imgToad">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
@@ -99,7 +102,7 @@
                 <article class="card text-bg-dark mb-3" style="max-width: 600px">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="img/yoshi-personaje.jpg" class="img-fluid rounded-start" alt="yoshi-personaje">
+                            <img src="img/yoshi-personaje.jpg" class="img-fluid rounded-start" alt="yoshi-personaje" id="imgYoshi">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
@@ -113,10 +116,14 @@
         </section>
 
         <aside>
-            <a href="antes-depues.html"><img src="img/caja.png"></a>
-            <h2>Antes y después</h2>
-            <h3>¿Te gustaría ver el antes y después de estos personajes?</h3>
-            <a href="antes-depues.html">Ver</a>
+            <div class="row">
+                <div class="col-md-1"> 
+                    <a href="antes-depues.html"><img src="img/caja.png"></a>
+                </div>
+                <div class="col-md-11">
+                    <h2>¿Te gustaría ver el antes estos personajes?</h2>
+                    <a href="antes-depues.html" class="fs-5">Ver</a>
+                </div>
         </aside>
     </main>
 
