@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav>
-            <a href="#" class="d-flex justify-content-center"><img src="../img/mario-logo.png" alt="mario-logo" ></a>
+            <a href="../inicio/index.html" class="d-flex justify-content-center"><img src="../img/mario-logo.png" alt="mario-logo" ></a>
             <ul class="d-flex justify-content-center m-3 bowlby-one-sc-regular">
                 <li><a href="../inicio/index.html">Inicio</a></li>
                 <li><a href="#">Juego</a></li>
@@ -29,32 +29,18 @@
     <main>
         <section>
             <h1 class="d-flex justify-content-center bowlby-one-sc-regular m-3">¡A jugar!</h1>
-        </section>
+            <hr class="m-5">
+            <p class="d-flex justify-content-center">Asi que.. estuviste navegando por la página, verdad? Toad quiere poner a prueba tu conocimiento para dejarte entrar al reino champiñon, aceptas el desafio?</p>
 
-        <section>
-            <p>Asi que.. estuviste navegando por la página, verdad? Toad quiere poner a prueba tu conocimiento para dejarte entrar al reino champiñon, aceptas el desafio?</p>
-
-            <p>Toad es muy competitivo, de hecho tiene el puntaje mas alto del reino, creer que puedas superarlo?</p>
-
-            <div class="d-flex justify-content-center gap-3">
-                <img src="img/moneda.png" alt="moneda">
-                <p>Monedas:</p> 
-                <p id="monedasJugador">0</p> <!-- Mostrar el puntaje inicial como 0 -->
-
-                <img src="img/moneda.png" alt="moneda">
-                <p>Monedas Toad:</p> 
-                <p id="monedasToad">0</p>
-            
-                <img src="img/corazon.png" alt="corazon">
-                <p>Vidas:</p>
-                <p id="vidas">3</p> <!-- Opcional: agregar para mostrar vidas si decides implementarlo -->
-            </div>
-            
+            <p class="d-flex justify-content-center">Toad es muy competitivo, de hecho tiene el puntaje mas alto del reino, creer que puedas superarlo?</p>
 
 
-            <div>
+
+            <div class="d-flex justify-content-center">
                 <p id="contenedorPregunta">Presiona el botón 'Preguntame' para comenzar.</p>
-        
+            </div>
+
+            <div class="d-flex justify-content-center gap-3 m-2">
                 <div>
                     <input type="radio" id="radio1" name="respuesta" class="respuesta" value="true">
                     <label for="radio1">Verdadero</label>
@@ -62,27 +48,46 @@
                 <div>
                     <input type="radio" id="radio2" name="respuesta" class="respuesta" value="false">
                     <label for="radio2">Falso</label>
-                </diva>    
+                </div>    
             </div>
             
-            <div>
+            <div class="d-flex justify-content-center gap-3 m-3">
                 <button id="btnPreguntame">Pregúntame</button>
                 <button id="btnReiniciar">Reiniciar</button>
             </div>
 
-            <div>
-                <img src="img/mario-azul.png" alt="mario-azul">
-                <p id="mensajeResultado"></p>
+            <div class="d-flex justify-content-center gap-3">
+                <img src="img/moneda.png" alt="moneda">
+                <p>Monedas:</p> 
+                <p id="monedasJugador">0</p> 
 
-                <img src="img/toad.png" alt="toad">
-                <p id="mensajeToad"></p>
+                <img src="img/corazon.png" alt="corazon">
+                <p>Vidas:</p>
+                <p id="vidas">3</p>
+
+                <p>----------------------</p>
+                
+                <img src="img/moneda.png" alt="moneda">
+                <p>Monedas Toad:</p> 
+                <p id="monedasToad">0</p>
+            </div>
+
+            <div class="d-flex justify-content-center gap-5">
+                <img src="img/mario-azul.png" alt="mario-azul">
+                <img src="img/toad.png" alt="toad">   
+            </div>
+            
+
+            <div class="d-flex justify-content-center gap-5">
+                <p id="mensajeResultado">-------------</p>
+                <p id="mensajeToad">----------------</p>
             </div>
         </section>
     </main>
 
     <footer>
         <nav>
-            <ul class="d-flex justify-content-center">
+            <ul class="d-flex justify-content-cente bowlby-one-sc-regular">
                 <li><a href="../contacto/index.html">Contacto</a></li>
                 <li><a href="../alumna/index.html">Alumna</a></li>
             </ul>

@@ -51,3 +51,7 @@ a:hover {
 a:active {
 	color: #63598f;
 }
+
+hr {
+    color: #000000;
+}
