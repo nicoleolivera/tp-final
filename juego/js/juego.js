@@ -36,11 +36,6 @@ let preguntaActual = '';
 let esVerdadera = false;
 let preguntasUsadas = []; // Array para almacenar preguntas ya utilizadas
 
-// Función para generar un puntaje aleatorio (0 o 100) para Toad
-function generarPuntajeToad() {
-    return Math.random() >= 0.5 ? 100 : 0;
-}
-
 // Función para determinar el ganador al final de las 10 preguntas
 function determinarGanador() {
     btnPreguntame.disabled = true;
@@ -53,7 +48,6 @@ function determinarGanador() {
         mensajeResultado.innerText = '¡Empate! Juguemos de nuevo.';
     }
 }
-
 
 // Función para obtener una nueva pregunta única
 function obtenerPreguntaUnica() {
@@ -116,26 +110,9 @@ for (let i = 0; i < radios.length; i++) {
             puntajeJugador += 100;
             mensajeResultado.innerText = '¡Correcto! Monedas: ' + puntajeJugador;
         } else {
-            mensajeResultado.innerText = 'Incorrecto. Monedas: ' + puntajeJugador;
-            vidas--; // Descontar una vida por respuesta incorrecta
-            vidasJugador.innerText = vidas;
-
-            if (vidas === 0) {
-                mensajeResultado.innerText = '¡Perdiste todas las vidas! Toad gana.';
-                btnPreguntame.disabled = true;
-                return;
-            }
-        }
-
-        // Generar puntaje aleatorio para Toad
-        let monedasToadGanadas = generarPuntajeToad();
-        puntajeToad += monedasToadGanadas;
-
-        // Mostrar si Toad respondió correctamente o no
-        if (monedasToadGanadas === 100) {
-            mensajeToad.innerText = 'Toad respondió correctamente. Monedas: ' + puntajeToad;
-        } else {
-            mensajeToad.innerText = 'Toad respondió incorrectamente. Monedas: ' + puntajeToad;
+            puntajeToad += 100; // Toad suma monedas si el jugador responde mal
+            mensajeResultado.innerText = 'Incorrecto. Las monedas van a Toad.';
+            mensajeToad.innerText = 'Toad obtiene 100 monedas.';
         }
 
         // Actualizar las monedas en la interfaz
@@ -144,23 +121,53 @@ for (let i = 0; i < radios.length; i++) {
 
         // Determinar si es la última pregunta
         if (cantPreguntas === 10) {
-            determinarGanador();
+            // Descuento de vidas al finalizar la ronda
+            if (puntajeToad > puntajeJugador) {
+                vidas--; // Descuento de vida por perder la ronda
+                mensajeResultado.innerText = '¡Toad tiene más monedas! Pierdes una vida.';
+            } else if (puntajeToad === puntajeJugador) {
+                vidas--; // Descuento de vida por empate
+                mensajeResultado.innerText = '¡Empate! Pierdes una vida.';
+            } else {
+                mensajeResultado.innerText = '¡Ganaste la ronda! Toad no puede contigo.';
+            }
+
+            // Actualizar las vidas en la interfaz
+            vidasJugador.innerText = vidas;
+
+            // Verificar si el jugador se quedó sin vidas
+            if (vidas === 0) {
+                mensajeResultado.innerText += ' ¡Te quedaste sin vidas! Toad gana el juego.';
+                btnPreguntame.disabled = true;
+                return;
+            }
+
+            determinarGanador(); // Finaliza el juego y muestra el resultado
         }
     };
 }
 
+
 // Evento para reiniciar el juego
 btnReiniciar.addEventListener('click', function () {
-    puntajeJugador = 0;
-    puntajeToad = 0;
     cantPreguntas = 0;
-    vidas = 3;
     preguntaActual = '';
     esVerdadera = false;
     preguntasUsadas = []; // Reiniciar las preguntas usadas
 
-    mostrarPregunta.innerText = 'Presiona el botón "Pregúntame" para intentarlo de nuevo.';
-    mensajeResultado.innerText = '';
+    if (vidas === 0) {
+        // Si el jugador se quedó sin vidas, reinicia todo
+        puntajeJugador = 0;
+        puntajeToad = 0;
+        vidas = 3;
+        mensajeResultado.innerText = '¡Juego reiniciado! Intenta de nuevo desde el principio.';
+    } else {
+        // Si aún tiene vidas, conserva las monedas
+        mensajeResultado.innerText = '¡Ronda reiniciada! Tus monedas están acumuladas.';
+    }
+
+    // Reiniciar el texto de la pregunta y botones
+    mostrarPregunta.innerText = 'Presiona el botón "Pregúntame" para continuar.';
     mensajeToad.innerText = '';
     btnPreguntame.disabled = false;
 
@@ -168,7 +175,7 @@ btnReiniciar.addEventListener('click', function () {
         radios[i].checked = false;
     }
 
-    // Reiniciar las monedas y vidas en la interfaz
+    // Actualizar las vidas y monedas en la interfaz
     monedasJugador.innerText = puntajeJugador;
     monedasToad.innerText = puntajeToad;
     vidasJugador.innerText = vidas;

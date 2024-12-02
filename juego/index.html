@@ -28,11 +28,63 @@
 
     <main>
         <section>
-            <h1 class="d-flex justify-content-center bowlby-one-sc-regular m-3">¡A jugar!</h1>
+            <h1 class="d-flex justify-content-center bowlby-one-sc-regular m-3">Bienvenido al desafío de Toad 🐸🍄</h1>
             <hr class="m-5">
-            <p class="d-flex justify-content-center">Asi que.. estuviste navegando por la página, verdad? Toad quiere poner a prueba tu conocimiento para dejarte entrar al reino champiñon, aceptas el desafio?</p>
+            <p class="d-flex justify-content-center">Así que... has estado explorando el sitio, ¿verdad? Pues bien, Toad tiene una propuesta para ti. Quiere poner a prueba tu conocimiento sobre el Reino Champiñón y sus habitantes. Si logras superar su desafío, podrás entrar al reino. ¿Aceptas el reto?</p>
 
-            <p class="d-flex justify-content-center">Toad es muy competitivo, de hecho tiene el puntaje mas alto del reino, creer que puedas superarlo?</p>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    ¿Cómo jugar? 🎮
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <h4>Prepárate para 10 preguntas</h4>
+                        <p>Cada pregunta será un verdadero o falso. ¿Crees saberlo todo sobre Mario, Peach y los Yoshis? ¡Demuestra de qué estás hecho!</p>
+                        
+                        <h5>💰 Gana monedas para vencer a Toad</h5>
+                        <p>Respuesta correcta: ¡100 monedas para ti!<br>
+                        Respuesta incorrecta: Toad se llevará las 100 monedas. </p>
+                        
+                        <h5>😈 Vidas limitadas</h5>
+                        <p>Empiezas con 3 vidas. <br>
+                        Si Toad tiene más monedas que tú al final de una ronda (10 preguntas) o empatan, pierdes una vida.<br>
+                        Cuando tus vidas lleguen a 0, ¡el juego termina!<br>
+                        Puedes reiniciar el juego en cualquier momento.<br>
+                        Si aún te quedan vidas, tus monedas acumuladas se mantendrán. Pero si pierdes todas las vidas, tendrás que empezar desde cero.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Controles 🚀
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Pregúntame: Empieza la partida y obtén una nueva pregunta.<br>
+                        Selecciona tu respuesta: Marca verdadero o falso y espera los resultados.<br>
+                        Reiniciar: Si las cosas no van bien, reinicia la ronda o el juego completo.<br>
+                        Toad ya está esperando. ¿Listo para demostrar que tienes lo que se necesita para entrar al Reino Champiñón? ¡Buena suerte! 🍄✨
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Objetivo del juego 🏆
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        Al final de las 10 preguntas, si tienes más monedas que Toad, ¡serás el campeón del Reino Champiñón! Pero cuidado, Toad es competitivo y no será fácil derrotarlo. ¿Estás listo para aceptar el desafío?
+                    </div>
+                  </div>
+                </div>
+              </div>
 
 
 
@@ -52,8 +104,8 @@
             </div>
             
             <div class="d-flex justify-content-center gap-3 m-3">
-                <button id="btnPreguntame">Pregúntame</button>
-                <button id="btnReiniciar">Reiniciar</button>
+                <button id="btnPreguntame" class="btn btn-danger">Pregúntame</button>
+                <button id="btnReiniciar" class="btn btn-dark">Reiniciar</button>
             </div>
 
             <div class="d-flex justify-content-center gap-3">
@@ -95,5 +147,6 @@
     </footer>
     
     <script src="js/juego.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
