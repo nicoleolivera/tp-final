@@ -55,3 +55,18 @@ a:active {
 hr {
     color: #000000;
 }
+
+/* Ajustes para el logo */
+.mobile-logo {
+    max-height: 40px; /* Ajusta el tamaño del logo */
+    margin-left: 20px; /* Mueve el logo hacia la derecha */
+}
+
+/* Ocultar logo mobile en desktop */
+@media (min-width: 768px) {
+    .mobile-logo {
+        display: none;
+    }
+}
+
+

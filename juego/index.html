@@ -12,11 +12,11 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a href="../inicio/index.html" class="d-flex justify-content-center"><img src="../img/mario-logo.png" alt="mario-logo" ></a>
+        <nav class="d-none d-md-flex flex-column justify-content-center">
+            <a href="../inicio/index.html" class="d-flex justify-content-center"><img src="../img/mario-logo.png" alt="mario-logo"></a>
             <ul class="d-flex justify-content-center m-3 bowlby-one-sc-regular">
                 <li><a href="../inicio/index.html">Inicio</a></li>
-                <li><a href="#">Juego</a></li>
+                <li><a href="../juego/index.html">Juego</a></li>
                 <li><a href="../historia/index.html">Historia</a></li>
                 <li><a href="../pelicula/index.html">Película</a></li>
                 <li><a href="../personajes/index.html">Personajes</a></li>
@@ -24,6 +24,30 @@
                 <li><a href="../noticias/index.html">Noticias</a></li>
             </ul>
         </nav>
+
+        <div class="d-md-none">
+            <nav class="navbar navbar-dark bg-dark d-flex align-items-center">
+                <a href="../inicio/index.html" class="navbar-brand me-auto">
+                    <img src="../img/mario-logo.png" alt="Mario Logo" class="mobile-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="bg-dark p-4">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link text-white" href="../inicio/index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Juego</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="../historia/index.html">Historia</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="../pelicula/index.html">Película</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="../personajes/index.html">Personajes</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="../galeria/index.html">Galería</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="../noticias/index.html">Noticias</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -39,7 +63,7 @@
                     ¿Cómo jugar? 🎮
                     </button>
                   </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
                         <h4>Prepárate para 10 preguntas</h4>
                         <p>Cada pregunta será un verdadero o falso. ¿Crees saberlo todo sobre Mario, Peach y los Yoshis? ¡Demuestra de qué estás hecho!</p>
@@ -139,7 +163,7 @@
 
     <footer>
         <nav>
-            <ul class="d-flex justify-content-cente bowlby-one-sc-regular">
+            <ul class="d-flex justify-content-center bowlby-one-sc-regular">
                 <li><a href="../contacto/index.html">Contacto</a></li>
                 <li><a href="../alumna/index.html">Alumna</a></li>
             </ul>
