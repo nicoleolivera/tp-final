@@ -16,7 +16,7 @@
             <a href="../inicio/index.html" class="d-flex justify-content-center"><img src="../img/mario-logo.png" alt="mario-logo"></a>
             <ul class="d-flex justify-content-center m-3 bowlby-one-sc-regular">
                 <li><a href="../inicio/index.html">Inicio</a></li>
-                <li><a href="../juego/index.html">Juego</a></li>
+                <li><a href="#">Juego</a></li>
                 <li><a href="../historia/index.html">Historia</a></li>
                 <li><a href="../pelicula/index.html">Película</a></li>
                 <li><a href="../personajes/index.html">Personajes</a></li>
@@ -54,109 +54,113 @@
         <section>
             <h1 class="d-flex justify-content-center bowlby-one-sc-regular m-3">Bienvenido al desafío de Toad 🐸🍄</h1>
             <hr class="m-5">
-            <p class="d-flex justify-content-center">Así que... has estado explorando el sitio, ¿verdad? Pues bien, Toad tiene una propuesta para ti. Quiere poner a prueba tu conocimiento sobre el Reino Champiñón y sus habitantes. Si logras superar su desafío, podrás entrar al reino. ¿Aceptas el reto?</p>
+            <p class="d-flex justify-content-center fs-4">Así que... has estado explorando el sitio, ¿verdad? Pues bien, Toad tiene una propuesta para ti. Quiere poner a prueba tu conocimiento sobre el Reino Champiñón y sus habitantes. ¿Aceptas el reto?</p>
 
-            <div class="accordion" id="accordionExample">
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    ¿Cómo jugar? 🎮
-                    </button>
-                  </h2>
-                  <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <h4>Prepárate para 10 preguntas</h4>
-                        <p>Cada pregunta será un verdadero o falso. ¿Crees saberlo todo sobre Mario, Peach y los Yoshis? ¡Demuestra de qué estás hecho!</p>
-                        
-                        <h5>💰 Gana monedas para vencer a Toad</h5>
-                        <p>Respuesta correcta: ¡100 monedas para ti!<br>
-                        Respuesta incorrecta: Toad se llevará las 100 monedas. </p>
-                        
-                        <h5>😈 Vidas limitadas</h5>
-                        <p>Empiezas con 3 vidas. <br>
-                        Si Toad tiene más monedas que tú al final de una ronda (10 preguntas) o empatan, pierdes una vida.<br>
+            <p class="d-flex justify-content-center gap-1">
+                <a class="btn btn-danger" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">¿Cómo jugar? 🎮</a>
+                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Controles 🚀</button>
+              </p>
+              <div class="row">
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card text-bg-dark card-body"><p>Prepárate para 10 preguntas: Cada pregunta será un verdadero o falso. ¿Crees saberlo todo sobre Mario, Peach y los Yoshis? ¡Demuestra de qué estás hecho!</p>
+                        <p>💰 Gana monedas para vencer a Toad:<br> 
+                        Respuesta correcta: ¡100 monedas para ti!<br>
+                        Respuesta incorrecta: Toad se llevará las 100 monedas.<br>
+                        Si Toad tiene más monedas que tú al final de una ronda (10 preguntas) o empatan, pierdes una vida.</p>
+                        <p>😈 Vidas limitadas:</br>
+                        Empiezas con 3 vidas.<br>
                         Cuando tus vidas lleguen a 0, ¡el juego termina!<br>
                         Puedes reiniciar el juego en cualquier momento.<br>
                         Si aún te quedan vidas, tus monedas acumuladas se mantendrán. Pero si pierdes todas las vidas, tendrás que empezar desde cero.</p>
                     </div>
                   </div>
                 </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Controles 🚀
-                    </button>
-                  </h2>
-                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        Pregúntame: Empieza la partida y obtén una nueva pregunta.<br>
+                <div class="col">
+                  <div class="collapse multi-collapse" id="multiCollapseExample2">
+                    <div class="card text-bg-dark card-body"><p> Pregúntame: Empieza la partida y obtén una nueva pregunta.<br>
                         Selecciona tu respuesta: Marca verdadero o falso y espera los resultados.<br>
                         Reiniciar: Si las cosas no van bien, reinicia la ronda o el juego completo.<br>
-                        Toad ya está esperando. ¿Listo para demostrar que tienes lo que se necesita para entrar al Reino Champiñón? ¡Buena suerte! 🍄✨
-                    </div>
-                  </div>
-                </div>
-                <div class="accordion-item">
-                  <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Objetivo del juego 🏆
-                    </button>
-                  </h2>
-                  <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        Al final de las 10 preguntas, si tienes más monedas que Toad, ¡serás el campeón del Reino Champiñón! Pero cuidado, Toad es competitivo y no será fácil derrotarlo. ¿Estás listo para aceptar el desafío?
+                        Toad ya está esperando. ¿Listo para demostrar que tienes lo que se necesita para entrar al Reino Champiñón? ¡Buena suerte! 🍄✨</p>
                     </div>
                   </div>
                 </div>
               </div>
 
+            <hr class="m-5">
+            <h2 class="d-flex justify-content-center bowlby-one-sc-regular m-5">¡Comienza!</h2>
+      
+            <div class="bg-success border border-dark border-4 rounded-4">
+                <p id="contenedorPregunta" class="d-flex justify-content-center bg-danger border border-dark border-4 rounded-pill m-4 p-4 fs-4">Presiona el botón 'Pregúntame' para comenzar.</p>
 
-
-            <div class="d-flex justify-content-center">
-                <p id="contenedorPregunta">Presiona el botón 'Preguntame' para comenzar.</p>
-            </div>
-
-            <div class="d-flex justify-content-center gap-3 m-2">
-                <div>
-                    <input type="radio" id="radio1" name="respuesta" class="respuesta" value="true">
-                    <label for="radio1">Verdadero</label>
+                <div class="d-flex justify-content-center gap-3 m-2">
+                    <div class="bg-danger border border-dark border-4 rounded-pill p-2">
+                        <input type="radio" id="radio1" name="respuesta" class="respuesta" value="true">
+                        <label for="radio1">Verdadero</label>
+                    </div>
+                    <div class="bg-danger border border-dark border-4 rounded-pill p-2">
+                        <input type="radio" id="radio2" name="respuesta" class="respuesta" value="false">
+                        <label for="radio2">Falso</label>
+                    </div>    
                 </div>
-                <div>
-                    <input type="radio" id="radio2" name="respuesta" class="respuesta" value="false">
-                    <label for="radio2">Falso</label>
-                </div>    
+
+                <div class="d-flex justify-content-center gap-3 m-3">
+                    <button id="btnPreguntame" class="btn btn-success border border-dark border-4 rounded-pill">Pregúntame</button>
+                </div>
+            </div>
+
+        <div class="row d-flex justify-content-center gap-3">
+            <div class="bg-success border border-dark border-4 rounded-4 mt-3 col-md-4">
+                <div class="d-flex gap-3">
+                    <!-- Columna para Mario -->
+                    <div class="d-flex align-items-center">
+                        <img src="img/mario-azul.png" alt="mario-azul" class="mt-2">
+                    </div>
+            
+                    <!-- Columna para monedas, vidas y mensaje -->
+                    <div class="d-flex flex-column">
+                        <!-- Fila para monedas y vidas -->
+                        <div class="d-flex align-items-center gap-3">
+                            <img src="img/moneda.png" alt="moneda" class="mt-2" style="max-height: 30px;">
+                            <p id="monedasJugador" class="mt-2">0</p>
+            
+                            <img src="img/corazon.png" alt="corazon" class="mt-2" style="max-height: 30px;">
+                            <p id="vidas" class="mt-2">3</p>
+                        </div>
+            
+                        <!-- Fila para mensaje -->
+                        <p id="mensajeResultado" class="mt-2 text-center">¡Estoy listo para ganar!</p>
+                    </div>
+                </div>
             </div>
             
-            <div class="d-flex justify-content-center gap-3 m-3">
-                <button id="btnPreguntame" class="btn btn-danger">Pregúntame</button>
-                <button id="btnReiniciar" class="btn btn-dark">Reiniciar</button>
-            </div>
-
-            <div class="d-flex justify-content-center gap-3">
-                <img src="img/moneda.png" alt="moneda">
-                <p>Monedas:</p> 
-                <p id="monedasJugador">0</p> 
-
-                <img src="img/corazon.png" alt="corazon">
-                <p>Vidas:</p>
-                <p id="vidas">3</p>
-
-                <p>----------------------</p>
-                
-                <img src="img/moneda.png" alt="moneda">
-                <p>Monedas Toad:</p> 
-                <p id="monedasToad">0</p>
-            </div>
-
-            <div class="d-flex justify-content-center gap-5">
-                <img src="img/mario-azul.png" alt="mario-azul">
-                <img src="img/toad.png" alt="toad">   
-            </div>
             
-
-            <div class="d-flex justify-content-center gap-5">
-                <p id="mensajeResultado">-------------</p>
-                <p id="mensajeToad">----------------</p>
+        <div class="bg-success border border-dark border-4 rounded-4 mt-3 col-md-4">
+            <div class="d-flex gap-3">
+                <!-- Columna para Toad -->
+                <div class="d-flex align-items-center">
+                    <img src="img/toad.png" alt="toad" class="mt-2">
+                </div>
+            
+                <!-- Columna para monedas, vidas y mensaje -->
+                <div class="d-flex flex-column">
+                    <!-- Fila para monedas y vidas -->
+                    <div class="d-flex align-items-center gap-3">
+                        <img src="img/moneda.png" alt="moneda" class="mt-2" style="max-height: 30px;">
+                        <p id="monedasToad" class="mt-2">0</p>
+            
+                        <img src="img/corazon.png" alt="corazon" class="mt-2" style="max-height: 30px;">
+                        <p class="mt-2">∞</p>
+                    </div>
+            
+                    <!-- Fila para mensaje -->
+                    <p id="mensajeToad" class="mt-2 text-center">¡No podrás vencerme!</p>
+                </div>
+            </div>
+        </div>    
+    </div>
+            <div class="d-flex justify-content-center">
+                <button id="btnReiniciar" class="btn btn-dark border border-dark border-4 rounded-pill mt-2">Reiniciar</button>
             </div>
         </section>
     </main>
