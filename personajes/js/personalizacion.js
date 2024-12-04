@@ -78,12 +78,15 @@ imgToad.addEventListener('click', function (e) {
 imgYoshi.addEventListener('click', function (e) {
   e.preventDefault();
   document.body.style.backgroundColor = '#cb0b0b';
+  document.body.style.color = '#000000';
 
   document.querySelectorAll('header, main, footer').forEach(function (element) {
     element.style.backgroundColor = '#55c425';
+    element.style.color = '#000000';
   });
    
   document.querySelectorAll('aside, section').forEach(function (element) {
     element.style.backgroundColor = '#ffffff';
+    element.style.color = '#000000';
   });
 });
