@@ -3,3 +3,42 @@
 #none {
     display: none;
 }
+
+/* Mantener las columnas y ajustar el espaciado en dispositivos pequeños */
+@media (max-width: 576px) {
+    .row {
+        gap: 1rem; /* Reducir el espacio entre los elementos */
+    }
+
+    .bg-danger {
+        max-width: 100%; /* Asegurar que el ancho no exceda el contenedor */
+        margin-left: auto; /* Centrar horizontalmente */
+        margin-right: auto;
+        overflow: hidden; /* Evitar que los elementos se desborden */
+    }
+
+    .d-flex {
+        flex-wrap: wrap; /* Permitir que los elementos se acomoden en varias líneas */
+        gap: 0.5rem; /* Reducir el espacio interno entre elementos */
+    }
+
+    img {
+        max-width: 100%; /* Limitar el ancho máximo de las imágenes al 100% del contenedor */
+        height: auto; /* Mantener la proporción */
+    }
+
+    #mensajeResultado, #mensajeToad {
+        font-size: 0.9rem; /* Reducir el tamaño del texto */
+        text-align: center; /* Asegurar que esté alineado en el centro */
+    }
+
+    .col-12 {
+        max-width: 100%;
+    }
+
+    /* Ajustes adicionales para las columnas si es necesario */
+    .bg-danger {
+        padding: 1rem;
+    }
+}
+

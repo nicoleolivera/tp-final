@@ -54,7 +54,13 @@
         <section>
             <h1 class="d-flex justify-content-center bowlby-one-sc-regular m-3">Bienvenido al desafío de Toad 🐸🍄</h1>
             <hr class="m-5">
-            <p class="d-flex justify-content-center fs-4">Así que... has estado explorando el sitio, ¿verdad? Pues bien, Toad tiene una propuesta para ti. Quiere poner a prueba tu conocimiento sobre el Reino Champiñón y sus habitantes. ¿Aceptas el reto?</p>
+            
+            <div class="row d-flex justify-content-center m-3">
+                <div class="col-sm-12 col-md-6">
+                    <p class="fs-4">Así que... has estado explorando el sitio, ¿verdad? Pues bien, Toad tiene una propuesta para ti. Quiere poner a prueba tu conocimiento sobre el Reino Champiñón y sus habitantes. ¿Aceptas el reto?</p>
+                </div>
+                <img src="img/mario-monedas.png" alt="mario" class="col-sm-12 col-md-6" style="max-width: 200px">
+            </div>
 
             <p class="d-flex justify-content-center gap-1">
                 <a class="btn btn-danger text-white" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">¿Cómo jugar? 🎮</a>
@@ -90,37 +96,34 @@
 
             <hr class="m-5">
             <h2 class="d-flex justify-content-center bowlby-one-sc-regular m-5">¡Comienza!</h2>
-      
-            <div class="bg-success border border-dark border-4 rounded-4">
-                <p id="contenedorPregunta" class="d-flex justify-content-center bg-danger border border-dark border-4 rounded-pill m-4 p-4 fs-4">Presiona el botón 'Pregúntame' para comenzar.</p>
+        
+        <div class="d-flex justify-content-center">
+            <div>
+                <p id="contenedorPregunta" class="d-flex justify-content-center bg-dark border border-dark border-4 rounded-4 m-4 p-4 fs-4">Presiona el botón 'Pregúntame' para comenzar.</p>
 
                 <div class="d-flex justify-content-center gap-3 m-2">
-                    <div class="bg-danger border border-dark border-4 rounded-pill p-2">
+                    <div class="bg-dark border border-dark border-4 rounded-pill p-2">
                         <input type="radio" id="radio1" name="respuesta" class="respuesta" value="true">
                         <label for="radio1">Verdadero</label>
                     </div>
-                    <div class="bg-danger border border-dark border-4 rounded-pill p-2">
+                    <div class="bg-dark border border-dark border-4 rounded-pill p-2">
                         <input type="radio" id="radio2" name="respuesta" class="respuesta" value="false">
                         <label for="radio2">Falso</label>
                     </div>    
-                </div>
 
-                <div class="d-flex justify-content-center gap-3 m-3">
-                    <button id="btnPreguntame" class="btn btn-success border border-dark border-4 rounded-pill">Pregúntame</button>
+                    <button id="btnPreguntame" class="btn bg-white border border-dark border-4 rounded-pill text-dark">Pregúntame</button>
                 </div>
             </div>
+        </div>
 
         <div class="row d-flex justify-content-center gap-3">
-            <div class="bg-success border border-dark border-4 rounded-4 mt-3 col-md-4">
+            <div class="bg-danger border border-dark border-4 rounded-4 mt-3 col-md-4">
                 <div class="d-flex gap-3">
-                    <!-- Columna para Mario -->
                     <div class="d-flex align-items-center">
                         <img src="img/mario-azul.png" alt="mario-azul" class="mt-2">
                     </div>
-            
-                    <!-- Columna para monedas, vidas y mensaje -->
+        
                     <div class="d-flex flex-column">
-                        <!-- Fila para monedas y vidas -->
                         <div class="d-flex align-items-center gap-3">
                             <img src="img/moneda.png" alt="moneda" class="mt-2" style="max-height: 30px;">
                             <p id="monedasJugador" class="mt-2">0</p>
@@ -129,23 +132,19 @@
                             <p id="vidas" class="mt-2">3</p>
                         </div>
             
-                        <!-- Fila para mensaje -->
                         <p id="mensajeResultado" class="mt-2 text-center">¡Estoy listo para ganar!</p>
                     </div>
                 </div>
             </div>
             
             
-        <div class="bg-success border border-dark border-4 rounded-4 mt-3 col-md-4">
+        <div class="bg-danger border border-dark border-4 rounded-4 mt-3 col-md-4">
             <div class="d-flex gap-3">
-                <!-- Columna para Toad -->
                 <div class="d-flex align-items-center">
                     <img src="img/toad.png" alt="toad" class="mt-2">
                 </div>
             
-                <!-- Columna para monedas, vidas y mensaje -->
                 <div class="d-flex flex-column">
-                    <!-- Fila para monedas y vidas -->
                     <div class="d-flex align-items-center gap-3">
                         <img src="img/moneda.png" alt="moneda" class="mt-2" style="max-height: 30px;">
                         <p id="monedasToad" class="mt-2">0</p>
@@ -153,15 +152,14 @@
                         <img src="img/corazon.png" alt="corazon" class="mt-2" style="max-height: 30px;">
                         <p class="mt-2">∞</p>
                     </div>
-            
-                    <!-- Fila para mensaje -->
+        
                     <p id="mensajeToad" class="mt-2 text-center">¡No podrás vencerme!</p>
                 </div>
             </div>
         </div>    
     </div>
             <div class="d-flex justify-content-center">
-                <button id="btnReiniciar" class="btn btn-dark border border-dark border-4 rounded-pill mt-2">Reiniciar</button>
+                <button id="btnReiniciar" class="btn btn-dark border border-dark border-4 rounded-pill mt-3">Reiniciar</button>
             </div>
         </section>
     </main>

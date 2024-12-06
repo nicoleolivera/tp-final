@@ -18,10 +18,21 @@ let vidas = 3; // Inicializar las vidas del jugador
 // Preguntas divididas en verdaderas y falsas
 let preguntasVerdaderas = [
     'Anya Taylor-Joy hizo el doblaje original de Princess Peach en la película.',
-    'Super Mario Bros. fue lanzado en 1985.',
+    'Super Mario Bros fue lanzado en 1985.',
     'Bowser es el rey de los Koopas.',
     'Mario puede transformarse en abeja.',
     'En su principio, los diseños para el juego debían ser hechos a mano.',
+    'El primer juego de Mario Bros se desarrolla en el Reino Champiñón.',
+    'En Super Mario Bros 2, Mario sueña con una larga escalera que lo lleva a un mundo desconocido.',
+    'En Super Mario World, Mario y Luigi van a la Isla de Yoshi para unas vacaciones.',
+    'En Super Mario 3D World Mario puede usar la supercampana para obtener habilidades felinas.',
+    'Toad, un residente del Reino Champiñón.',
+    'La transformación de Mario Ardilla tiene una apariencia similar a Mario Mapache.',
+    'Shigeru Miyamoto, el creador de Super Mario, basaba sus diseños en los recorridos que a él mismo le gustaría jugar.',
+    'La primera aparición de Mario fue en el videojuego Donkey Kong en 1981.',
+    'Mario tiene la capacidad de transformarse en mapache.',
+    'El objetivo principal de Mario en Super Mario Bros. es rescatar a la Princesa Toadstool.',
+
 ];
 
 let preguntasFalsas = [
@@ -30,6 +41,16 @@ let preguntasFalsas = [
     'En la película, el actor Jack Black hace el doblaje de Luigi.',
     'Super Mario Bros. fue creado antes que Donkey Kong.',
     'Los Yoshis no varían de color porque son únicos en su especie.',
+    'La película Super Mario Bros: la película se estrenó en cines en 2024.',
+    'En la película, Luigi es el hermano mayor de Mario y es capturado por Bowser.',
+    'La transformación de Mario Mapache le otorga la capacidad de volar gracias a sus alas.',
+    'El diseño de los niveles de Super Mario Bros se realizaba exclusivamente en código, sin necesidad de dibujos en papel.',
+    'La película Super Mario Bros se estrenó en 2010 y fue producida por Pixar.',
+    'Bowser es el hermano menor de Mario, y su misión es ayudarlo a rescatar a la princesa Peach.',
+    'En Super Mario Bros, Mario es un plomero mexicano que vive en el Reino Champiñón.',
+    'En la película Super Mario Bros: La Película, Toad es el antagonista principal.',
+    'La habilidad de Mario para transformarse en Mario de fuego le permite lanzar bolas de agua en lugar de bolas de fuego.',
+    'La película Super Mario Bros fue lanzada en 2000 por la productora DreamWorks.',
 ];
 
 let preguntaActual = '';
