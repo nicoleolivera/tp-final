@@ -52,116 +52,59 @@
 
     <main>
         <section>
-            <h1 class="d-flex justify-content-center bowlby-one-sc-regular m-3">Bienvenido al desafío de Toad 🐸🍄</h1>
-            <hr class="m-5">
-            
-            <div class="row d-flex justify-content-center m-3">
-                <div class="col-sm-12 col-md-6">
-                    <p class="fs-4">Así que... has estado explorando el sitio, ¿verdad? Pues bien, Toad tiene una propuesta para ti. Quiere poner a prueba tu conocimiento sobre el Reino Champiñón y sus habitantes. ¿Aceptas el reto?</p>
-                </div>
-                <img src="img/mario-monedas.png" alt="mario" class="col-sm-12 col-md-6" style="max-width: 200px">
+            <!-- Mensaje para dispositivos móviles -->
+            <div class="d-block d-xl-none text-center m-5">
+                <h2>Este juego solo puede jugarse en versión de ordenador.</h2>
+                <p class="fs-5">Por favor, visita esta página desde un dispositivo de escritorio para disfrutar del desafío de Bowser.</p>
             </div>
 
-            <p class="d-flex justify-content-center gap-1">
-                <a class="btn btn-danger text-white" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">¿Cómo jugar? 🎮</a>
-                <button class="btn btn-danger" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Controles 🚀</button>
-              </p>
-              <div class="row">
-                <div class="col">
-                  <div class="collapse multi-collapse" id="multiCollapseExample1">
-                    <div class="card text-bg-dark card-body"><p class="fw-medium">Prepárate para 10 preguntas: Cada pregunta será un verdadero o falso. ¿Crees saberlo todo sobre Mario? ¡Demuestra de qué estás hecho!</p>
-                        <p class="fw-medium">💰 Gana monedas para vencer a Toad:</p> 
-                        <p>Respuesta correcta: ¡100 monedas para ti!<br>
-                        Respuesta incorrecta: Toad se llevará las 100 monedas.<br>
-                        Si Toad tiene más monedas que tú al final de una ronda (10 preguntas) o empatan, pierdes una vida.</p>
-                        <p class="fw-medium">😈 Vidas limitadas:</p>
-                        <p>Empiezas con 3 vidas.<br>
-                        Cuando tus vidas lleguen a 0, ¡el juego termina!<br>
-                        Puedes reiniciar el juego en cualquier momento.<br>
-                        Si aún te quedan vidas, tus monedas acumuladas se mantendrán. Pero si pierdes todas las vidas, tendrás que empezar desde cero.</p>
+            <!-- Contenido del juego para pantallas más grandes -->
+            <div class="d-none d-xl-block">
+                <h1 class="d-flex justify-content-center bowlby-one-sc-regular m-3">Bienvenido al desafío de Bowser</h1>
+                <hr class="m-5">
+                
+                <div class="row d-flex justify-content-center m-3">
+                    <div class="col-sm-12 col-md-6">
+                        <p class="fs-4">Así que... has estado explorando el sitio, ¿verdad? Pues bien, Bowser tiene una pregunta para ti.¿Aceptas el reto?</p>
                     </div>
-                  </div>
+                    <img src="img/mario-monedas.png" alt="mario" class="col-sm-12 col-md-6" style="max-width: 200px">
                 </div>
-                <div class="col">
-                  <div class="collapse multi-collapse" id="multiCollapseExample2">
-                    <div class="card text-bg-dark card-body"><p class="fw-medium">Botones:</p>
-                        <p>Pregúntame: Empieza la partida y obtén una nueva pregunta.<br>
-                        Selecciona tu respuesta: Marca verdadero o falso y espera los resultados.<br>
-                        Reiniciar: Si las cosas no van bien, reinicia la ronda o el juego completo.</p>
-                        <p>Toad ya está esperando. ¿Listo para demostrar que tienes lo que se necesita para entrar al Reino Champiñón? ¡Buena suerte! 🍄✨</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
-            <hr class="m-5">
-            <h2 class="d-flex justify-content-center bowlby-one-sc-regular m-5">¡Comienza!</h2>
-        
+            
+
+            
+                <hr class="m-5">
+                <h2 class="d-flex justify-content-center bowlby-one-sc-regular m-5">¡Comienza!</h2>
+
+            <!--contenedor juego-->  
         <div class="d-flex justify-content-center">
-            <div>
-                <p id="contenedorPregunta" class="d-flex justify-content-center bg-dark border border-dark border-4 rounded-4 m-4 p-4 fs-4">Presiona el botón 'Pregúntame' para comenzar.</p>
 
-                <div class="d-flex justify-content-center gap-3 m-2">
-                    <div class="bg-dark border border-dark border-4 rounded-pill p-2">
-                        <input type="radio" id="radio1" name="respuesta" class="respuesta" value="true">
-                        <label for="radio1">Verdadero</label>
-                    </div>
-                    <div class="bg-dark border border-dark border-4 rounded-pill p-2">
-                        <input type="radio" id="radio2" name="respuesta" class="respuesta" value="false">
-                        <label for="radio2">Falso</label>
-                    </div>    
+            <!--contenedor usuario-->
+            <div class="d-flex flex-column col-6 p-4">
+                    
+                <div class="d-flex">
+                    <img src="img/corazon.png" alt="corazon" class="mt-2" style="max-width: 50px">
+                    <p id="vidas" class="mt-2">5</p>
+                </div>
 
-                    <button id="btnPreguntame" class="btn bg-white border border-dark border-4 rounded-pill text-dark">Pregúntame</button>
-                </div>
-            </div>
-        </div>
+                <div>
+                    <form>
+                        <label for="respuesta" class="bowlby-one-sc-regular">Tu respuesta</label>
+                        <input type="number" class="form-control" id="respuesta" name="respuesta" placeholder="Solo números" required="">
 
-        <div class="row d-flex justify-content-center gap-3">
-            <div class="bg-danger border border-dark border-4 rounded-4 mt-3 col-md-4">
-                <div class="d-flex gap-3">
-                    <div class="d-flex align-items-center">
-                        <img src="img/mario-azul.png" alt="mario-azul" class="mt-2">
-                    </div>
-        
-                    <div class="d-flex flex-column">
-                        <div class="d-flex align-items-center gap-3">
-                            <img src="img/moneda.png" alt="moneda" class="mt-2" style="max-height: 30px;">
-                            <p id="monedasJugador" class="mt-2">0</p>
-            
-                            <img src="img/corazon.png" alt="corazon" class="mt-2" style="max-height: 30px;">
-                            <p id="vidas" class="mt-2">3</p>
-                        </div>
-            
-                        <p id="mensajeResultado" class="mt-2 text-center">¡Estoy listo para ganar!</p>
-                    </div>
+                        <button type="submit" class="btn btn-danger bowlby-one-sc-regular mt-3" id="enviar">Enviar</button>
+                    </form>
                 </div>
             </div>
-            
-            
-        <div class="bg-danger border border-dark border-4 rounded-4 mt-3 col-md-4">
-            <div class="d-flex gap-3">
-                <div class="d-flex align-items-center">
-                    <img src="img/toad.png" alt="toad" class="mt-2">
-                </div>
-            
-                <div class="d-flex flex-column">
-                    <div class="d-flex align-items-center gap-3">
-                        <img src="img/moneda.png" alt="moneda" class="mt-2" style="max-height: 30px;">
-                        <p id="monedasToad" class="mt-2">0</p>
-            
-                        <img src="img/corazon.png" alt="corazon" class="mt-2" style="max-height: 30px;">
-                        <p class="mt-2">∞</p>
-                    </div>
-        
-                    <p id="mensajeToad" class="mt-2 text-center">¡No podrás vencerme!</p>
-                </div>
+
+            <!--contenedor bowser-->
+            <div class="col-6 p-4">
+                <p id="mensajeBowser">Estoy pensando en un número... es de cuatro dígitos. Me recuerda a algo importante, como un aniversario... pero ¡ey! Creo que eso fue demasiada información, ¿verdad? Aunque, siendo honesto, dudo que puedas descubrirlo. </p>
+                <img src="img/bowser.png" alt="bowser">
             </div>
-        </div>    
-    </div>
-            <div class="d-flex justify-content-center">
-                <button id="btnReiniciar" class="btn btn-dark border border-dark border-4 rounded-pill mt-3">Reiniciar</button>
-            </div>
-        </section>
+        </div>  
+
+        <!--contenedores ocultos si ganas o perdes-->
     </main>
 
     <footer>
