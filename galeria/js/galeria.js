@@ -1,8 +1,8 @@
 new VenoBox({
     selector: '.my-image-links',
     numeration: true,
-    infinigall: true,
-    share: true,
+    infinigall: false,
+    share: false,
     titleattr: 'data-title',
     // fitview: true,
     spinner: 'rotating-plane'

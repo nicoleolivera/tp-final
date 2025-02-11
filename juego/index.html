@@ -55,7 +55,7 @@
             <!-- Mensaje para dispositivos móviles -->
             <div class="d-block d-xl-none text-center m-5">
                 <h2>Este juego solo puede jugarse en versión de ordenador.</h2>
-                <p class="fs-5">Por favor, visita esta página desde un dispositivo de escritorio para disfrutar del desafío de Bowser.</p>
+                <p class="fs-5">Por favor, visita esta página desde un dispositivo de escritorio para disfrutar del desafío de Bowser 🕹️🎮</p>
             </div>
 
             <!-- Contenido del juego para pantallas más grandes -->
@@ -65,48 +65,73 @@
                 
                 <div class="row d-flex justify-content-center m-3">
                     <div class="col-sm-12 col-md-6">
-                        <p class="fs-4">Sabes que Bowser puede ser un poco infantil a veces, y bueno... bloqueó esta parte del sitio con una contraseña y para acceder debés jugar a un juego de avinanzas con él ¿aceptas el reto?</p>
+                        <p class="fs-4">Lo siento, esta parte del sitio está oculta. Sabes que Bowser puede ser un poco molesto a veces y esta vez decidió bloquear esta parte del sitio con una contraseña. 😓 Es posible acceder pero debes jugar un juego de adivinanzas con él. ¿Aceptas el reto?🎮</p>
                     </div>
-                    <img src="img/mario.png" alt="mario" class="col-sm-12 col-md-6" style="max-width: 200px">
+                    <img src="img/mario-manos.png" alt="mario" class="col-sm-12 col-md-6" style="max-width: 200px">
                 </div>
 
-            
-
-            
                 <hr class="m-5">
-                <h2 class="d-flex justify-content-center bowlby-one-sc-regular m-5">¡Comienza!</h2>
+                <h2 class="d-flex justify-content-center bowlby-one-sc-regular m-5">¡Contraseña!</h2>
 
             <!--contenedor juego-->  
         <div class="d-flex justify-content-center">
 
-            <!--contenedor usuario-->
-            <div class="d-flex flex-column col-6 p-4">
-                    
-                <div class="d-flex">
-                    <img src="img/corazon.png" alt="corazon" class="mt-2" style="max-width: 50px">
-                    <p id="vidas" class=" bowlby-one-sc-regular mt-2">5</p>
-                </div>
-
-                <div>
-                    <form>
-                        <label for="respuesta" class="bowlby-one-sc-regular">Tu respuesta</label>
-                        <input type="number" class="form-control" id="respuesta" name="respuesta" placeholder="Solo números" required="">
-
-                        <button type="submit" class="btn btn-danger bowlby-one-sc-regular mt-3" id="enviar">Enviar</button>
-                    </form>
-                </div>
-                <button id="reiniciar" class="btn btn-danger bowlby-one-sc-regular mt-3" style="display: none;">Reiniciar</button>
-                <p id="mensajeResultado" class=" bowlby-one-sc-regular"></p>
-            </div>
-
             <!--contenedor bowser-->
             <div class="col-6 p-4">
+                <div class="d-flex">
+                    <p id="vidas" class=" bowlby-one-sc-regular me-3">❤️ Vidas: 5</p>
+                    <p id="intentos" class=" bowlby-one-sc-regular">💀 Intentos: 3</p>
+                </div>
+                
                 <p id="mensajeBowser" class="fs-5">Estoy pensando en un número... es de cuatro dígitos. Me recuerda a algo importante: un aniversario... pero ¡ey! Creo que eso fue demasiada información, ¿verdad? Aunque, siendo honesto, dudo que puedas descubrirlo. </p>
 
                 
                 <img src="img/bowser.png" alt="bowser">
             </div>
-        </div>  
+
+            <!--contenedor usuario-->
+            <div class="d-flex flex-column col-6 p-4">
+                <img src="img/bloques.png" alt="bloques">
+
+                <div>
+                    <form>
+                        <label for="respuesta" class="bowlby-one-sc-regular mt-5">Tu respuesta</label>
+                        <input type="number" class="form-control" id="respuesta" name="respuesta" placeholder="Solo números" required="">
+            
+                        <button type="submit" class="btn btn-danger bowlby-one-sc-regular mt-3 w-100" id="enviar">Enviar</button>
+                    </form>
+                </div>
+            
+                <button id="reiniciar" class="btn btn-danger bowlby-one-sc-regular mt-3 w-100" style="display: none;">Reiniciar</button>
+            
+                <button id="continuar" class="btn btn-danger bowlby-one-sc-regular mt-3 w-100" style="display: none;">Continuar</button>
+
+                <p id="mensajeResultado" class="bowlby-one-sc-regular"></p>
+            </div>
+            
+        </div> 
+        
+        <hr class="m-5">
+
+        
+        <!--contenedor oculto-->
+        <div id="contenedorOculto" style="display: none;">
+            <div class="d-flex justify-content-center">
+                
+          
+                
+          
+
+            <div class="col-6 p-4">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/U2ybLufNxAc?si=T5nZp0pVkm6q9PtS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-6 p-4">
+                <p>Te debo una disculpa no tenias porque ver eso.. ya entiendo porque estaba oculto.</p>
+                <img src="img/mario.png" alt="mario" class="col-sm-12 col-md-6" style="max-width: 200px">
+            </div>
+        </div>
+        </div>
 
         
     </main>
@@ -120,7 +145,8 @@
         </nav>
     </footer>
     
-    <script src="js/juego.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/juego.js"></script>
 </body>
 </html>

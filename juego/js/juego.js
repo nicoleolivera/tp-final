@@ -1,9 +1,14 @@
+// números
 let numeroGanador = 1985;
 let numeroIngresado;
+
+// contenedores
+let contenedorOculto = document.querySelector('#contenedorOculto');
 
 // botones
 let enviarRespuesta = document.querySelector('#enviar');
 let reiniciar = document.querySelector('#reiniciar'); // Botón de reinicio
+let continuar = document.querySelector('#continuar');
 
 // mensajes
 let mensajeBowser = document.querySelector('#mensajeBowser');
@@ -12,6 +17,9 @@ let mensajeResultado = document.querySelector('#mensajeResultado'); // Elemento 
 // contador vidas/intentos
 let vidas = 5;
 let vidasTexto = document.querySelector('#vidas');
+let intentos = 3;
+let intentosTexto = document.querySelector('#intentos');
+
 
 // Validación del número ingresado
 enviarRespuesta.addEventListener('click', function(e) {
@@ -33,12 +41,13 @@ function pistas() {
         mensajeBowser.innerText = '¡Correcto, es el año en el que nací! ... bueno, también el año en el que se lanzó Super Mario Bros. ¿Cómo lo supiste?';
         mensajeResultado.innerText = '¡Ganaste!';
         enviarRespuesta.disabled = true;
+        continuar.style.display = 'block';
     } else {
         vidas--; // Restar una vida
-        vidasTexto.innerText = vidas; // Actualizar el contador en pantalla
+        vidasTexto.innerText = `❤️ Vidas: ${vidas}`; // Actualizar el contador en pantalla
 
         if (vidas === 0) {
-            mensajeBowser.innerText = '¡Te quedaste sin intentos! 😝 Ahora estoy dudando de si realmente recorriste la página, pero está bien... te doy una última pista: si sigues navegando no muy lejos de aquí, encontrarás un año muy importante para la franquicia. Intenta aprender algo de historia.';
+            mensajeBowser.innerText = '¡Te quedaste sin vidas! 😝 Ahora estoy dudando de si realmente recorriste la página, pero está bien... te doy una última pista: si sigues navegando no muy lejos de aquí, encontrarás un año muy importante para la franquicia. Intenta aprender algo de historia.';
             mensajeResultado.innerText = 'Perdiste. Inténtalo de nuevo.';
             enviarRespuesta.disabled = true;
 
@@ -80,13 +89,29 @@ function pistas() {
 
 // Reiniciar el juego
 reiniciar.addEventListener('click', function() {
-    vidas = 5;
-    vidasTexto.innerText = vidas;
-    mensajeBowser.innerText = 'Con que vas a jugar de nuevo ¿eh? Yo sabía que no podrías a la primera 🤭';
-    mensajeResultado.innerText = '';
-    enviarRespuesta.disabled = false;
-    document.querySelector('#respuesta').value = ''; // Limpiar el campo de respuesta
+    if (intentos > 0) {
+        intentos--; // Restar un intento
+        vidas = 5;
+        vidasTexto.innerText = `❤️ Vidas: ${vidas}`;
+        intentosTexto.innerText = `💀 Intentos: ${intentos}`;
+        mensajeBowser.innerText = 'Con que vas a jugar de nuevo ¿eh? Yo sabía que no podrías. 🤭';
+        mensajeResultado.innerText = '';
+        enviarRespuesta.disabled = false;
+        document.querySelector('#respuesta').value = '';
+        reiniciar.style.display = 'none';
+    }
 
-    // Ocultar el botón de reinicio
-    reiniciar.style.display = 'none';
+    if (intentos === 0) {
+        mensajeBowser.innerText = 'Se acabaron tus intentos. No puedes jugar más.';
+        reiniciar.disabled = true;
+        enviarRespuesta.disabled = true;
+    }
+});
+
+
+
+continuar.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    contenedorOculto.style.display = "block";
 });
