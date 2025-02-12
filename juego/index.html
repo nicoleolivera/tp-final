@@ -52,101 +52,100 @@
 
     <main>
         <section>
-            <!-- Mensaje para dispositivos móviles -->
+            <!-- Mensaje para mobile -->
             <div class="d-block d-xl-none text-center m-5">
                 <h2>Este juego solo puede jugarse en versión de ordenador.</h2>
                 <p class="fs-5">Por favor, visita esta página desde un dispositivo de escritorio para disfrutar del desafío de Bowser 🕹️🎮</p>
             </div>
 
-            <!-- Contenido del juego para pantallas más grandes -->
-            <div class="d-none d-xl-block">
-                <h1 class="d-flex justify-content-center bowlby-one-sc-regular m-3">Bienvenido al desafío de Bowser</h1>
-                <hr class="m-5">
-                
-                <div class="row d-flex justify-content-center m-3">
-                    <div class="col-md-6">
-                        <p class="fs-4">Lo siento, esta parte del sitio está oculta. Sabes que Bowser puede ser un poco molesto a veces y esta vez decidió bloquear esta parte del sitio con una contraseña. 😓 Es posible acceder pero debes jugar un juego de adivinanzas con él. ¿Aceptas el reto?🎮</p>
+                <!-- Contenido del juego para pantallas más grandes -->
+                <div class="d-none d-xl-block">
+                    <h1 class="d-flex justify-content-center bowlby-one-sc-regular m-3">Bienvenido al desafío de Bowser</h1>
+                    <hr class="m-5">
+                    
+                    <div class="row d-flex justify-content-center m-3">
+                        <div class="col-md-6">
+                            <p class="fs-4">Lo siento, esta parte del sitio está oculta. Sabes que Bowser puede ser un poco molesto a veces y esta vez decidió bloquear esta parte del sitio con una contraseña. 😓 Es posible acceder pero debes jugar un juego de adivinanzas con él. ¿Aceptas el reto?🎮</p>
+                        </div>
+                        <img src="img/mario-manos.png" alt="mario" class="col-md-6" style="max-width: 200px">
                     </div>
-                    <img src="img/mario-manos.png" alt="mario" class="col-md-6" style="max-width: 200px">
+
+                    <hr class="m-5">
+                    <h2 class="d-flex justify-content-center bowlby-one-sc-regular m-5">¡Contraseña!</h2>
+
+                    <!--Contenedor del juego-->  
+                    <div class="d-flex justify-content-center">
+
+                        <!--Contenedor personaje - Bowser-->
+                        <div class="col-6 p-4 d-flex flex-column align-items-center">
+                            
+                            <div class="d-flex">
+                                <p id="vidas" class=" bowlby-one-sc-regular me-3">❤️ Vidas: 5</p>
+                                <p id="intentos" class=" bowlby-one-sc-regular">💀 Intentos: 3</p>
+                            </div>
+                            
+                            <p id="mensajeBowser" class="fs-5">¡¿Cómo osas a querer entrar?! He declarado esta parte del sitio como mía, me pertenece. 😠 Pero bueno, si quieres intentarlo... puedo darte un par de pistas: es un número de cuatro dígitos. Un año muy importante para mi, pero ¡ey! Creo que esa fue demasiada información. Aunque, siendo honesto, dudo que puedas descifrarlo.</p>
+
+                            <img src="img/bowser.png" alt="bowser">
+                        </div>
+
+                        <!--Contenedor con respuesta del usuario-->
+                        <div class="d-flex flex-column col-6 p-4">
+                            
+                            <img src="img/alto.png" alt="alto">
+
+                            <div>
+                                <form>
+                                    <label for="respuesta" class="bowlby-one-sc-regular mt-5">Ingrese la contraseña</label>
+                                    <input type="number" class="form-control" id="respuesta" name="respuesta" placeholder="Solo números" required="">
+                        
+                                    <button type="submit" class="btn btn-danger bowlby-one-sc-regular mt-3 w-100" id="enviar">Enviar</button>
+                                </form>
+                            </div>
+                        
+                            <button id="reiniciar" class="btn btn-danger bowlby-one-sc-regular mt-3 w-100" style="display: none;">Reiniciar</button>
+                        
+                            <button id="continuar" class="btn btn-danger bowlby-one-sc-regular mt-3 w-100" style="display: none;">Continuar</button>
+
+                            <p id="mensajeResultado" class="bowlby-one-sc-regular"></p>
+                        </div>
+                    </div> 
+            
+                    <hr class="m-5">
+
+            
+                    <!--Contenedor oculto-->
+                    <div id="contenedorOculto" style="display: none;">
+                        
+                        <div class=" justify-content-center">
+                            <h2 class="d-flex justify-content-center bowlby-one-sc-regular m-5">¡Lo lograste! pero...</h2>  
+                        </div>
+                    
+                        <!--Contenido del contendor-->
+                        <div class="d-flex flex-wrap justify-content-center">
+                            <div class="col-6 p-4">
+                                <iframe width="600" height="400" src="https://www.youtube.com/embed/U2ybLufNxAc?si=T5nZp0pVkm6q9PtS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+
+                            <div class="col-6 p-5 fs-5 d-flex flex-column align-items-center">
+                                <p>Creo que te debo una disculpa... 😅😐🤔 ya entiendo porque estaba oculto.</p>
+                                <img src="img/mario.png" alt="mario" class="col-md-6" style="max-width: 180px">
+                            </div>
+                        
+                            <div class="col-6 p-5 fs-5 d-flex flex-column align-items-center">
+                                <p>Nadie tenía por qué ver esto... 😐</p>
+                                <img src="img/bowser-sorprendido.png" alt="bowser-sorprendido" class="col-md-6">
+                            </div>
+
+                            <div class="col-6 p-4">
+                                <p>🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢</p>
+                                <img src="img/mario-bowser.gif" alt="mario-bowser">
+                                <p>🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <hr class="m-5">
-                <h2 class="d-flex justify-content-center bowlby-one-sc-regular m-5">¡Contraseña!</h2>
-
-            <!--contenedor juego-->  
-        <div class="d-flex justify-content-center">
-
-            <!--contenedor bowser-->
-            <div class="col-6 p-4 d-flex flex-column align-items-center">
-                <div class="d-flex">
-                    <p id="vidas" class=" bowlby-one-sc-regular me-3">❤️ Vidas: 5</p>
-                    <p id="intentos" class=" bowlby-one-sc-regular">💀 Intentos: 3</p>
-                </div>
-                
-                <p id="mensajeBowser" class="fs-5">¡¿Cómo osas a querer entrar?! He declaro esta parte del sitio como mía, me pertenece. 😠 Pero bueno, si quieres intentarlo... puedo darte un par de pistas: es un número de cuatro dígitos. Un año muy importante para mi, pero ¡ey! Creo que esa fue demasiada información. Aunque, siendo honesto, dudo que puedas descubrirlo.</p>
-
-                
-                <img src="img/bowser.png" alt="bowser">
-            </div>
-
-            <!--contenedor usuario-->
-            <div class="d-flex flex-column col-6 p-4">
-                <img src="img/alto.png" alt="alto">
-
-                <div>
-                    <form>
-                        <label for="respuesta" class="bowlby-one-sc-regular mt-5">Ingrese la contraseña</label>
-                        <input type="number" class="form-control" id="respuesta" name="respuesta" placeholder="Solo números" required="">
-            
-                        <button type="submit" class="btn btn-danger bowlby-one-sc-regular mt-3 w-100" id="enviar">Enviar</button>
-                    </form>
-                </div>
-            
-                <button id="reiniciar" class="btn btn-danger bowlby-one-sc-regular mt-3 w-100" style="display: none;">Reiniciar</button>
-            
-                <button id="continuar" class="btn btn-danger bowlby-one-sc-regular mt-3 w-100" style="display: none;">Continuar</button>
-
-                <p id="mensajeResultado" class="bowlby-one-sc-regular"></p>
-            </div>
-            
-        </div> 
-        
-        <hr class="m-5">
-
-        
-        <!--contenedor oculto-->
-        <div id="contenedorOculto" style="display: none;">
-            <div class=" justify-content-center">
-
-            <h2 class="d-flex justify-content-center bowlby-one-sc-regular m-5">¡Lo lograste! pero...</h2>  
-            
-        </div>
-            
-            <div class="d-flex flex-wrap justify-content-center">
-            <div class="col-6 p-4">
-                <iframe width="600" height="400" src="https://www.youtube.com/embed/U2ybLufNxAc?si=T5nZp0pVkm6q9PtS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-
-            <div class="col-6 p-5 fs-5 d-flex flex-column align-items-center">
-                <p>Creo que te debo una disculpa no tenías porque ver esto... 😅😐🤔 ya entiendo porque estaba oculto.</p>
-                <img src="img/mario.png" alt="mario" class="col-md-6" style="max-width: 180px">
-            </div>
-
-               
-            <div class="col-6 p-5 fs-5 d-flex flex-column align-items-center">
-                <p>Y yo creo que a veces conservamos archivo un poco vergonzoso... 😐</p>
-                <img src="img/bowser-sorprendido.png" alt="bowser-sorprendido" class="col-md-6">
-            </div>
-
-            <div class="col-6 p-4">
-                <p>🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢</p>
-                <img src="img/mario-bowser.gif" alt="mario-bowser">
-                <p>🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢⭐🐢</p>
-            </div>
-        </div>
-        </div>
-
-        
+        </section>
     </main>
 
     <footer>
