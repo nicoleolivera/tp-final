@@ -40,7 +40,7 @@ function pistas() {
 
     //En caso de que acierte el número - gana
     if (numeroIngresado === numeroGanador) {
-        mensajeBowser.innerText = '¡Correcto! Es el año en el que nací... bueno, también el año en que se lanzó Super Mario Bros. ¿Cómo lo supiste?';
+        mensajeBowser.innerText = '¡Correcto! Es el año en que nací... bueno, y también cuando salió Super Mario Bros. ¿Cómo lo adivinaste? 🤔';
         mensajeResultado.innerText = '¡Ganaste!';
         enviarRespuesta.disabled = true;
         continuar.style.display = 'block';
@@ -50,7 +50,7 @@ function pistas() {
 
         //En caso de que se quede sin vidas - pierde un intento
         if (vidas === 0) {
-            mensajeBowser.innerText = '¡Te quedaste sin vidas! 😝 Ahora estoy dudando de si realmente recorriste la página, pero está bien... te doy una última pista: Si sigues navegando, no muy lejos de aquí encontrarás un año muy importante para la franquicia. Intenta aprender algo de historia.';
+            mensajeBowser.innerText = '¡Te quedaste sin vidas! 😝 Ahora estoy dudando de si realmente recorriste la página. Pero te daré una última pista: aprende un poco de historia, hay un año clave para la franquicia.';
             mensajeResultado.innerText = 'Perdiste. Inténtalo de nuevo.';
             enviarRespuesta.disabled = true;
             reiniciar.style.display = 'block';
@@ -83,7 +83,7 @@ function pistas() {
         } else if (numeroIngresado >= 1900 && numeroIngresado < 1940) {
             mensajeBowser.innerText = '¿Qué edad crees que tengo? antes de los 40 ni existían los píxeles 😒';
         } else {
-            mensajeBowser.innerText = 'No creo que esa fecha tenga sentido. Recuerda que estamos hablando de mí... bueno, y también de Mario. Yo al menos intentaría con alguna fecha dentro del siglo XX. 🙄😒';
+            mensajeBowser.innerText = 'No creo que esa fecha tenga sentido. Recuerda que estamos hablando de mí... bueno, y también de Mario. Yo al menos intentaría con alguna fecha dentro del 1900. 🙄😒';
         }
     }
 }

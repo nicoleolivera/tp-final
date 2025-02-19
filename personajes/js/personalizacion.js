@@ -1,5 +1,4 @@
-// botón que cambia el color de la web según el personaje clickeado
-
+// Selecciono las imágenes de los personajes
 let imgMario = document.querySelector('#imgMario');
 let imgLuigi = document.querySelector('#imgLuigi');
 let imgPeach = document.querySelector('#imgPeach');
@@ -7,7 +6,14 @@ let imgBowser = document.querySelector('#imgBowser');
 let imgToad = document.querySelector('#imgToad');
 let imgYoshi = document.querySelector('#imgYoshi');
 
+// Asigno eventos de clic a cada imagen para cambiar los colores del fondo y secciones de la página
 
+// El orden es:
+// Color de background
+// Color de las secciones header, main y footer
+// Color de las secciones aside y section
+
+// Mario
 imgMario.addEventListener('click', function (e) {
   e.preventDefault();
   document.body.style.backgroundColor = '#0091ff';
@@ -21,6 +27,7 @@ imgMario.addEventListener('click', function (e) {
   });
 });
 
+// Luigi
 imgLuigi.addEventListener('click', function (e) {
   e.preventDefault();
   document.body.style.backgroundColor = '#06bf00';
@@ -34,6 +41,7 @@ imgLuigi.addEventListener('click', function (e) {
  });
 });
 
+// Peach
 imgPeach.addEventListener('click', function (e) {
   e.preventDefault();
   document.body.style.backgroundColor = '#ffa3d0';
@@ -47,7 +55,7 @@ imgPeach.addEventListener('click', function (e) {
   });
 });
 
-  
+// Bowser
 imgBowser.addEventListener('click', function (e) {
   e.preventDefault();
   document.body.style.backgroundColor = '#000000';
@@ -61,7 +69,7 @@ imgBowser.addEventListener('click', function (e) {
   });
 });
   
-  
+// Toad
 imgToad.addEventListener('click', function (e) {
   e.preventDefault();
   document.body.style.backgroundColor = '#ff0000';
@@ -75,6 +83,7 @@ imgToad.addEventListener('click', function (e) {
   });
 });
 
+// Yoshi
 imgYoshi.addEventListener('click', function (e) {
   e.preventDefault();
   document.body.style.backgroundColor = '#cb0b0b';
