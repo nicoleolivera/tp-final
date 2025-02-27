@@ -18,12 +18,12 @@ imgMario.addEventListener('click', function (e) {
   e.preventDefault();
   document.body.style.backgroundColor = '#0091ff';
 
-  document.querySelectorAll('header, main, footer').forEach(function (element) {
-    element.style.backgroundColor = '#bf0006';
+  document.querySelectorAll('header, main, footer').forEach(function (secciones) {
+    secciones.style.backgroundColor = '#bf0006';
   });
 
-  document.querySelectorAll('aside, section').forEach(function (element) {
-    element.style.backgroundColor = '#1136bd';
+  document.querySelectorAll('aside, section').forEach(function (secciones) {
+    secciones.style.backgroundColor = '#1136bd';
   });
 });
 
@@ -32,12 +32,12 @@ imgLuigi.addEventListener('click', function (e) {
   e.preventDefault();
   document.body.style.backgroundColor = '#06bf00';
 
-  document.querySelectorAll('header, main, footer').forEach(function (element) {
-   element.style.backgroundColor = '#55c425';
+  document.querySelectorAll('header, main, footer').forEach(function (secciones) {
+   secciones.style.backgroundColor = '#55c425';
  });
 
-  document.querySelectorAll('aside, section').forEach(function (element) {
-    element.style.backgroundColor = '#90e36c';
+  document.querySelectorAll('aside, section').forEach(function (secciones) {
+    secciones.style.backgroundColor = '#90e36c';
  });
 });
 
@@ -46,12 +46,12 @@ imgPeach.addEventListener('click', function (e) {
   e.preventDefault();
   document.body.style.backgroundColor = '#ffa3d0';
   
-  document.querySelectorAll('header, main, footer').forEach(function (element) {
-    element.style.backgroundColor = '#25a5c4';
+  document.querySelectorAll('header, main, footer').forEach(function (secciones) {
+    secciones.style.backgroundColor = '#25a5c4';
   });
  
-  document.querySelectorAll('aside, section').forEach(function (element) {
-    element.style.backgroundColor = '#c42555';
+  document.querySelectorAll('aside, section').forEach(function (secciones) {
+    secciones.style.backgroundColor = '#c42555';
   });
 });
 
@@ -60,12 +60,12 @@ imgBowser.addEventListener('click', function (e) {
   e.preventDefault();
   document.body.style.backgroundColor = '#000000';
 
-  document.querySelectorAll('header, main, footer').forEach(function (element) {
-    element.style.backgroundColor = '#fff700';
+  document.querySelectorAll('header, main, footer').forEach(function (secciones) {
+    secciones.style.backgroundColor = '#fff700';
   });
    
-  document.querySelectorAll('aside, section').forEach(function (element) {
-    element.style.backgroundColor = '#ffa200';
+  document.querySelectorAll('aside, section').forEach(function (secciones) {
+    secciones.style.backgroundColor = '#ffa200';
   });
 });
   
@@ -74,12 +74,12 @@ imgToad.addEventListener('click', function (e) {
   e.preventDefault();
   document.body.style.backgroundColor = '#ff0000';
 
-  document.querySelectorAll('header, main, footer').forEach(function (element) {
-    element.style.backgroundColor = '#ffffff';
+  document.querySelectorAll('header, main, footer').forEach(function (secciones) {
+    secciones.style.backgroundColor = '#ffffff';
   });
    
-  document.querySelectorAll('aside, section').forEach(function (element) {
-    element.style.backgroundColor = '#0000d6';
+  document.querySelectorAll('aside, section').forEach(function (secciones) {
+    secciones.style.backgroundColor = '#0000d6';
   });
 });
 
@@ -89,13 +89,13 @@ imgYoshi.addEventListener('click', function (e) {
   document.body.style.backgroundColor = '#cb0b0b';
   document.body.style.color = '#000000';
 
-  document.querySelectorAll('header, main, footer').forEach(function (element) {
-    element.style.backgroundColor = '#55c425';
-    element.style.color = '#000000';
+  document.querySelectorAll('header, main, footer').forEach(function (secciones) {
+    secciones.style.backgroundColor = '#55c425';
+    secciones.style.color = '#000000';
   });
    
-  document.querySelectorAll('aside, section').forEach(function (element) {
-    element.style.backgroundColor = '#ffffff';
-    element.style.color = '#000000';
+  document.querySelectorAll('aside, section').forEach(function (secciones) {
+    secciones.style.backgroundColor = '#ffffff';
+    secciones.style.color = '#000000';
   });
 });
