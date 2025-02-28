@@ -1,10 +1,11 @@
-/*Google Fonts*/
+/* Google Fonts */
 .bowlby-one-sc-regular {
     font-family: "Bowlby One SC", sans-serif;
     font-weight: 400;
     font-style: normal;
   }
-  
+
+/* Sitio */
 
 body {
     background: #0cff2c;	
@@ -56,18 +57,9 @@ hr {
     color: #000000;
 }
 
-/* Ajustes para el logo */
+/* Logo */
 
 .mobile-logo {
-    max-height: 40px; /* Ajusta el tamaño del logo */
-    margin-left: 20px; /* Mueve el logo hacia la derecha */
+    max-height: 40px;
+    margin-left: 20px;
 }
-
-/* Ocultar logo mobile en desktop */
-@media (min-width: 768px) {
-    .mobile-logo {
-        display: none;
-    }
-}
-
-
