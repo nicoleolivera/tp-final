@@ -118,7 +118,7 @@ reiniciar.addEventListener('click', function() {
     vidasTexto.innerText = `❤️ Vidas: ${vidas}`;
     intentosTexto.innerText = `💀 Intentos: ${intentos}`;
     
-    mensajeBowser.innerText = '¡¿Cómo te atreves a querer entrar?! 😠 Esta zona es mía. Pero si insistes… te daré una pista: es un número de cuatro dígitos, un año importante para mí. Aunque dudo que lo descifres. 😏';
+    mensajeBowser.innerText = '¡¿Cómo te atreves a querer entrar?!😠 Esta zona es mía. Pero si insistes… te daré una pista: es un número de cuatro dígitos, un año importante para mí. Aunque dudo que lo descifres. 😏';
     document.querySelector('#respuesta').value = '';
 
     // Habilitar botones
