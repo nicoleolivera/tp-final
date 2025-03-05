@@ -7,6 +7,7 @@ let contenedorOculto = document.querySelector('#contenedorOculto');
 
 // Botones
 let enviarRespuesta = document.querySelector('#enviar');
+let otraVez = document.querySelector('#otravez');
 let reiniciar = document.querySelector('#reiniciar');
 let continuar = document.querySelector('#continuar');
 
@@ -50,7 +51,7 @@ function pistas() {
         if (vidas === 0) {
             mensajeBowser.innerText = '¡Te quedaste sin vidas! 😝 Ahora estoy dudando de si realmente recorriste la página. Pero te daré una última pista: aprende un poco de historia. Hay un año clave para Mario —digo, Bowser, yo.';
             enviarRespuesta.disabled = true;
-            reiniciar.style.display = 'block';
+            otraVez.style.display = 'block';
             return;
         }
 
@@ -87,8 +88,8 @@ function pistas() {
     }
 }
 
-// Reiniciar el juego
-reiniciar.addEventListener('click', function() {
+// Intentar otra vez
+otraVez.addEventListener('click', function() {
     if (intentos > 0) {
         intentos--;
         vidas = 5;
@@ -97,16 +98,40 @@ reiniciar.addEventListener('click', function() {
         mensajeBowser.innerText = 'Con que vas a jugar de nuevo ¿eh? Yo sabía que no podrías. 🤭';
         enviarRespuesta.disabled = false;
         document.querySelector('#respuesta').value = '';
-        reiniciar.style.display = 'none';
+        otraVez.style.display = 'none';
     }
 
     // Fin del juego sin ganar
     if (intentos === 0) {
         mensajeBowser.innerText = 'Se acabaron tus intentos. No puedes jugar más. 🤭';
-        reiniciar.disabled = true;
+        otraVez.disabled = true;
         enviarRespuesta.disabled = true;
+        reiniciar.style.display = 'block';
     }
 });
+
+// Reiniciar el juego
+reiniciar.addEventListener('click', function() {
+    
+    vidas = 5;
+    intentos = 3;
+    vidasTexto.innerText = `❤️ Vidas: ${vidas}`;
+    intentosTexto.innerText = `💀 Intentos: ${intentos}`;
+    
+    mensajeBowser.innerText = '¡¿Cómo te atreves a querer entrar?! 😠 Esta zona es mía. Pero si insistes… te daré una pista: es un número de cuatro dígitos, un año importante para mí. Aunque dudo que lo descifres. 😏';
+    document.querySelector('#respuesta').value = '';
+
+    // Habilitar botones
+    enviarRespuesta.disabled = false;
+    otraVez.disabled = false;
+    reiniciar.disabled = false;
+
+    // Ocultar botones
+    reiniciar.style.display = 'none';
+    otraVez.style.display = 'none';
+    continuar.style.display = 'none';
+});
+
 
 // Fin del juego ganando - accede a la sección del sitio oculta
 continuar.addEventListener('click', function(e) {
