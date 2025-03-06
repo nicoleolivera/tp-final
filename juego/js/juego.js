@@ -83,7 +83,7 @@ function pistas() {
         } else if (numeroIngresado >= 1900 && numeroIngresado <= 1940) {
             mensajeBowser.innerText = '¿Qué edad crees que tengo? antes de 1940 ni existían los píxeles 😒';
         } else {
-            mensajeBowser.innerText = 'No creo que esa fecha tenga sentido. Recuerda que estamos hablando de mí... bueno, y también de Mario. Yo al menos intentaría con alguna fecha dentro de 1900. 🙄😒';
+            mensajeBowser.innerText = 'Yo al menos intentaría con alguna fecha dentro de 1900. 🙄😒';
         }
     }
 }
@@ -118,7 +118,7 @@ reiniciar.addEventListener('click', function() {
     vidasTexto.innerText = `❤️ Vidas: ${vidas}`;
     intentosTexto.innerText = `💀 Intentos: ${intentos}`;
     
-    mensajeBowser.innerText = '¡¿Cómo te atreves a querer entrar?!😠 Esta zona es mía. Pero si insistes… te daré una pista: es un número de cuatro dígitos, un año importante para mí. Aunque dudo que lo descifres. 😏';
+    mensajeBowser.innerText = '¡¿Cómo te atreves a querer entrar?! 😠 Esta zona es mía. Pero si insistes… te daré una pista: es un número de cuatro dígitos, un año importante para mí. Aunque dudo que lo descifres. 😏';
     document.querySelector('#respuesta').value = '';
 
     // Habilitar botones
